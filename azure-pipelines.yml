@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: kiran-linux
+  vmImage: default
 
 steps:
 - task: Maven@3
