@@ -16,12 +16,11 @@ steps:
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
-    mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8.0_382'
+    mavenOptions: '-Xmx3072m'    
+    versionSpec: '8'
     jdkArchitectureOption: 'x64'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'clean package'
+    jdkSourceOption: 'PreInstalled'    
+    publishJUnitResults: true    
+    goals: 'clean install'
 
 
